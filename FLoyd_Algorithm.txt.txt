@@ -1,0 +1,61 @@
+Floyd's_algorithm
+
+Array2 =[6,1,5,2,7,3,4,5];
+
+const find =  Array1 =>{
+    let Tortoise = Array1[0]; //Tortoise=0
+    let Hare = Array1[0]; //Hare=0
+    
+    while(true){
+        Tortoise = Array1[Tortoise];
+        Hare = Array1[Array1[Hare]];
+        if( Hare == Tortoise )
+          break;
+    }
+    let prt1 = Array1[0];
+    let prt2 = Tortoise;
+    while (prt1 != prt2){
+      prt1 = Array1[prt1];
+      prt2 = Array1[prt2];   
+    }
+    return prt1
+}
+
+//Ban đầu khởi tạo giá trị của 2 con trỏ (rùa và thỏ)=0 , đưa vào while duyệt đến khi thỏa điều kiện thì break ra 
+// Tortoise = Array1[6] = 4;
+// Tortoise = Array1[4] = 7;
+// Tortoise = Array1[7] = 5;
+// Tortoise = Array1[5] = 7;
+// Tortoise = Array1[7] = 5;
+
+// Hare = Array1[Array1[6]]=Array1[4]=7;
+// Hare = Array1[Array1[7]]=Array1[5]=3;
+// Hare = Array1[Array1[3]]=Array1[5]=2;
+// Hare = Array1[Array1[2]]=Array1[5]=3;
+// Hare = Array1[Array1[3]]=Array1[2]=5;                    
+      
+         // T || H
+         // 4 || 7
+         // 7 || 3
+         // 5 || 2
+         // 7 || 3
+         // 5 || 5
+    Tortoise == Hare                                     
+     break;
+
+//prt1 || prt2
+// 6   ||  5
+// 4   ||  3
+// 7   ||  2
+// 5   ||  5
+
+    prt1 == prt2
+
+    return 5;  
+
+//Kết luận: 2 Pointers sẽ bắt đầu cùng một thời điểm nhưng vị trí của Pointers Hare sẽ xa hơn Pointers Tortoise 
+// và sẽ loop đến khi gặp nhau lại 1 lần nữa tại điểm bắt đầu 
+
+
+
+     
