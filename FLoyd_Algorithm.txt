@@ -1,7 +1,3 @@
-Floyd's_algorithm
-
-Array2 =[6,1,5,2,7,3,4,5];
-
 const find =  Array1 =>{
     let Tortoise = Array1[0]; //Tortoise=head
     let Hare = Array1[0]; //Hare=head
