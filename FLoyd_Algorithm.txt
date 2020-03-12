@@ -8,8 +8,8 @@ const find =  Array1 =>{
         if( Hare == Tortoise )
           break;
     }
-    let prt1 = Array1[0];
-    let prt2 = Tortoise;
+    let prt1 = Array1[0];//return Tortoise->head
+    let prt2 = Hare;
     while (prt1 != prt2){
       prt1 = Array1[prt1];
       prt2 = Array1[prt2];   
